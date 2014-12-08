@@ -7,12 +7,10 @@ tr {
 }
 
 td {
-    border: 1px solid #1A5A63;
     width: 45%;
 }
 
 table {
-    border: 1px solid #1A5A63;
     width:100%;
     font-size:2em;
 }
