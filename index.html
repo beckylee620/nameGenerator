@@ -58,16 +58,16 @@
                 toRange.possibleTo = rangeCount;
             }
             
-//            var chosenTo;
+//            var possibilities;
 //            var randomNumber = Math.random();
-            var output = rangeCount;
+            var chosenTo = rangeCount;
 //           var difference = 1;
 //            
-//            for (chosenTo in toRange) {
-//                if (Number(toRange[chosenTo] - randomNumber >= 0) {
+//            for (possibilities in toRange) {
+//                if (Number(toRange[possibilities] - randomNumber >= 0) {
 //                    if (Number(toRange[chosenTo]) - randomNumber < difference) {
-//                        output = chosenTo;
-//                        difference = Number(toRange[chosenTo]) - randomNumber;
+//                        chosenTo = possibilities;
+//                        difference = Number(toRange[possibilities]) - randomNumber;
 //                    }
 //                }
             }
@@ -85,7 +85,7 @@
 //            };
             
             
-            document.getElementById("outputE").innerHTML = output;
+            document.getElementById("outputE").innerHTML = chosenTo;
             document.getElementById("outputF").innerHTML = inputGender;
         }
         </script>
