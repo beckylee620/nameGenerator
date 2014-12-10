@@ -55,22 +55,24 @@
             
             for (possibleTo in sampleDataX) {
                 rangeCount += sampleDataX[possibleTo];
-                toRange.possibleTo = rangeCount;
+                toRange.possibleTo = rangeCount; //i can't tell what's going into toRange
             }
             
-//            var possibilities;
-//            var randomNumber = Math.random();
-            var chosenTo = toRange[possibleTo];
-//           var difference = 1;
-//            
-//            for (possibilities in toRange) {
-//                if (Number(toRange[possibilities] - randomNumber >= 0) {
-//                    if (Number(toRange[chosenTo]) - randomNumber < difference) {
-//                        chosenTo = possibilities;
-//                        difference = Number(toRange[possibilities]) - randomNumber;
-//                    }
-//                }
-//            }
+            var possibilities;
+            var randomNumber = Math.random();
+            var chosenTo = "";
+           var difference = 1;
+            
+            for (possibilities in toRange) {
+                if (Number(toRange[possibilities]) - randomNumber >= 0) {
+                    if (chosenTo == "") {
+                        chosenTo = possibilities;
+                    } else if (Number(toRange[chosenTo]) - randomNumber < difference) {
+                        chosenTo = possibilities;
+                        difference = Number(toRange[possibilities]) - randomNumber;
+                    }
+                }
+            }
             
 //            var sampleDataY = {
 //                4:"d";
