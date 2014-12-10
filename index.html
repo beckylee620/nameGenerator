@@ -43,16 +43,33 @@
             var inputGender = document.getElementById("selectGender").value;
             
             var sampleDataX = {
-                one:1,
-                two:2,
-                three:3
+                one:0.1,
+                two:0.2,
+                three:0.7
             };
             
-            var output = "";
             var possibleTo;
+            var toRange = {};
+            var rangeCount = 0;
+            
             
             for (possibleTo in sampleDataX) {
-                output += sampleDataX[possibleTo];
+                rangeCount += sampleDataX[possibleTo];
+                toRange.possibleTo = rangeCount;
+            }
+            
+            var chosenTo;
+            var randomNumber = Math.random();
+            var output = "";
+            var difference = 1;
+            
+            for (chosenTo in toRange) {
+                if (Number(toRange[chosenTo] - randomNumber >= 0) {
+                    if (Number(toRange[chosenTo]) - randomNumber < difference) {
+                        output = chosenTo;
+                        difference = Number(toRange[chosenTo]) - randomNumber;
+                    }
+                }
             }
             
 //            var sampleDataY = {
