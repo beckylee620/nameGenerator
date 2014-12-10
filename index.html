@@ -55,7 +55,7 @@
             
             for (possibleTo in sampleDataX) {
                 rangeCount += sampleDataX[possibleTo];
-                toRange.possibleTo = rangeCount; //i can't tell what's going into toRange
+                toRange.rangeCount = possibleTo; //i can't tell what's going into toRange
             }
             
             var possibilities;
@@ -64,12 +64,12 @@
            var difference = 1;
             
             for (possibilities in toRange) {
-                if (Number(toRange[possibilities]) - randomNumber >= 0) {
+                if (Number(possibilities) - randomNumber >= 0) {
                     if (chosenTo == "") {
-                        chosenTo = possibilities;
-                    } else if (Number(toRange[chosenTo]) - randomNumber < difference) {
-                        chosenTo = possibilities;
-                        difference = Number(toRange[possibilities]) - randomNumber;
+                        chosenTo = toRange[possibilities];
+                    } else if (Number(chosenTo) - randomNumber < difference) {
+                        chosenTo = toRange[possibilities];
+                        difference = Number(possibilities) - randomNumber;
                     }
                 }
             }
