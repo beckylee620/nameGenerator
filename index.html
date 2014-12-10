@@ -51,17 +51,19 @@
             var possibleTo;
             var toRange = {};
             var rangeCount = 0;
+            var property = "";
             
             
             for (possibleTo in sampleDataX) {
                 rangeCount += sampleDataX[possibleTo];
-                toRange.rangeCount = possibleTo; //i can't tell what's going into toRange
+                property = possibleTo;
+                toRange.rangeCount = property; //i can't tell what's going into toRange
             }
             
             var possibilities;
             var randomNumber = Math.random();
             var chosenTo = "";
-           var difference = 1;
+            var difference = 1;
             
             for (possibilities in toRange) {
                 if (Number(possibilities) - randomNumber >= 0) {
