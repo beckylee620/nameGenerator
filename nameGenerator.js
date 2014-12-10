@@ -1,4 +1,3 @@
-<script>
 function generateNames() {
   var inputYear = document.getElementById("selectYear").value;
   inputYear = parseInt(inputYear);
@@ -22,22 +21,19 @@ function generateNames() {
       out.concat(newState);
     }
     
+    currentState = newState;
+    iteration = iteration + 1;
+      
+    if (iteration >= 7) { // min(length_dist$nchar)
+      if (iteration == 5) { // %in% length_dist$nchar
+        var stopProb = ""; // (length_dist %>% filter(nchar == iter))$cum_prob
+        currentState = ""; // <- sample(c(new_state, end), size = 1, replace = F, prob = c(1-stop_prob, stop_prob))
+      } else {
+        currentState = end;
+      }
+    } else {
       currentState = newState;
-                iteration = iteration + 1;
-                
-                if (iteration >= 7) { // min(length_dist$nchar)
-                    if (iteration == 5) { // %in% length_dist$nchar
-                        var stopProb = ""; // (length_dist %>% filter(nchar == iter))$cum_prob
-                        currentState = ""; // <- sample(c(new_state, end), size = 1, replace = F, prob = c(1-stop_prob, stop_prob))
-                    } else {
-                        currentState = end;
-                    }
-                } else {
-                    currentState = newState;
-                }
-            }
-            
-            document.getElementById("outputE").innerHTML = inputYear;
-            document.getElementById("outputF").innerHTML = inputGender;
-        }
-        </script>
+    }
+  }
+  
+}
