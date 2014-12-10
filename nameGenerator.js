@@ -1,5 +1,5 @@
 function generateNames() {
-  this.inputYear = "IS IT WORKING PLEASE";
+  var testing = "PLEASE WORK NOW";
 
 //  var currentState = "#";
 //  var end = "_";
