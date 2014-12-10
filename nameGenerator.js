@@ -1,4 +1,4 @@
-function generateNames() {
+function generateNames(inputYear) {
   inputYear = inputYear*3;
   return inputYear;
 
