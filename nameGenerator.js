@@ -1,5 +1,5 @@
 function generateNames() {
-  this.inputYear = inputYear*3;
+  inputYear = inputYear*3;
 
 //  var currentState = "#";
 //  var end = "_";
