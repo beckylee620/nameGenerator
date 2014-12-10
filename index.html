@@ -48,6 +48,13 @@
                 three:3
             };
             
+            var output = "";
+            var possibleTo;
+            
+            for (possibleTo in sampleDataX) {
+                output += sampleDataX[possibleTo];
+            }
+            
 //            var sampleDataY = {
 //                4:"d";
 //                5:"e";
@@ -61,7 +68,7 @@
 //            };
             
             
-            document.getElementById("outputE").innerHTML = sampleDataX.three;
+            document.getElementById("outputE").innerHTML = output;
             document.getElementById("outputF").innerHTML = inputGender;
         }
         </script>
