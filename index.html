@@ -42,6 +42,8 @@
             inputYear = parseInt(inputYear);
             var inputGender = document.getElementById("selectGender").value;
             
+            this.generateNames();
+            
             document.getElementById("outputE").innerHTML = inputYear;
             document.getElementById("outputF").innerHTML = inputGender;
         }
