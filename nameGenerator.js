@@ -1,5 +1,5 @@
-function generateNames(theInput) {
-  this.theInput = "IS IT WORKING PLEASE";
+function generateNames() {
+  this.inputYear = "IS IT WORKING PLEASE";
 
 //  var currentState = "#";
 //  var end = "_";
