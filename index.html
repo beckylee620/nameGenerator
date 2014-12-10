@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Name Generator</title>
-        <script type="text/javascript" src="nameGenerator.js"></script>
+        
     </head>
     
     <body>
@@ -42,10 +42,12 @@
             inputYear = parseInt(inputYear);
             var inputGender = document.getElementById("selectGender").value;
             
-            this.generateNames();
+            var sampleData = {"x":{1:"a", 2:"b", 3:"c"}, "y":{4:"d", 5:"e"}, "z":{6:"f", 7:"g", 8:"h", 9:"i"}};
             
-            document.getElementById("outputE").innerHTML = inputYear;
-            document.getElementById("outputF").innerHTML = testing;
+            
+            
+            document.getElementById("outputE").innerHTML = sampleData[x[1]];
+            document.getElementById("outputF").innerHTML = inputGender;
         }
         </script>
         </div>
@@ -65,7 +67,7 @@
         </div>
 
 
-
+    
     <link rel="stylesheet" type="text/css" href="nameGenerator.css" />
     <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -74,7 +76,7 @@
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
     <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
-    
+    <script type="text/javascript" src="nameGenerator.js"></script>
 
         
     </body>
