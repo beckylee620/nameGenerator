@@ -1,6 +1,5 @@
 function generateNames() {
   var testing = "PLEASE WORK NOW";
-  return testing;
 
 //  var currentState = "#";
 //  var end = "_";
