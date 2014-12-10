@@ -69,6 +69,7 @@
                 if (Number(toRange[possibilities]) - randomNumber >= 0) {
                     if (chosenTo == "") {
                         chosenTo = possibilities;
+                        difference = Number(toRange[possibilities]) - randomNumber;
                     } else if (Number(toRange[possibilities]) - randomNumber < difference) {
                         chosenTo = possibilities;
                         difference = Number(toRange[possibilities]) - randomNumber;
