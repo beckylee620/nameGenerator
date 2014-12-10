@@ -57,7 +57,7 @@
             for (possibleTo in sampleDataX) {
                 rangeCount += sampleDataX[possibleTo];
                 property = possibleTo;
-                toRange.property = rangeCount; //i can't tell what's going into toRange
+                toRange[property] = rangeCount; //i can't tell what's going into toRange
             }
             
             var possibilities;
