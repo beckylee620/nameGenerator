@@ -48,6 +48,14 @@
                 "three":0.4
             };
             
+            chooseProbly();
+            
+            document.getElementById("outputE").innerHTML = chosenTo;
+            document.getElementById("outputF").innerHTML = inputGender;
+        }
+
+        function chooseProbly() {
+
             var possibleTo;
             var toRange = {};
             var rangeCount = 0;
@@ -76,23 +84,9 @@
                     }
                 }
             }
-            
-//            var sampleDataY = {
-//                4:"d";
-//                5:"e";
-//            };
-            
-//            var sampleDataZ = {
-//                6:"f";
-//                7:"g";
-//                8:"h";
-//                9:"i";
-//            };
-            
-            
-            document.getElementById("outputE").innerHTML = chosenTo;
-            document.getElementById("outputF").innerHTML = inputGender;
         }
+
+
         </script>
         </div>
         
