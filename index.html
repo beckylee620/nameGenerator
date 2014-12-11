@@ -38,7 +38,7 @@
         <script>
         
 
-        function chooseProbly() {
+        function chooseProbly(sampleDataX) {
 
             var possibleTo;
             var toRange = {};
@@ -81,7 +81,7 @@
                 "three":0.4
             };
             
-            chooseProbly();
+            chooseProbly(sampleDataX);
             
             document.getElementById("outputE").innerHTML = chosenTo;
             document.getElementById("outputF").innerHTML = inputGender;
