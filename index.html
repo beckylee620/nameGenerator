@@ -37,25 +37,32 @@
 
         <script>
         
-
-        function chooseProbly(sampleDataX) {
-
-            var possibleTo;
-            var toRange = {};
-            var rangeCount = 0;
-            var property = "";
+        var possibleTo;
+        var toRange = {};
+        var rangeCount = 0;
+        var property = "";
+        
+        var possibilities;
+        var randomNumber = Math.random();
+        var chosenTo = "";
+        var difference = 1;
+        
+        var inputYear = document.getElementById("selectYear").value;
+        inputYear = parseInt(inputYear);
+        var inputGender = document.getElementById("selectGender").value;
+        var sampleDataX = {
+            "one":0.3,
+            "two":0.3,
+            "three":0.4
+        };
             
-            
+
+        function chooseProbly() {
             for (possibleTo in sampleDataX) {
                 rangeCount += sampleDataX[possibleTo];
                 property = possibleTo;
-                toRange[property] = rangeCount; //i can't tell what's going into toRange
+                toRange[property] = rangeCount;
             }
-            
-            var possibilities;
-            var randomNumber = Math.random();
-            var chosenTo = "";
-            var difference = 1;
             
             for (possibilities in toRange) {
                 if (Number(toRange[possibilities]) - randomNumber >= 0) {
@@ -68,21 +75,10 @@
                     }
                 }
             }
-            return chosenTo;
-        }        
+        }
         
         function buttonClicked() {
-            var inputYear = document.getElementById("selectYear").value;
-            inputYear = parseInt(inputYear);
-            var inputGender = document.getElementById("selectGender").value;
-            
-            var sampleDataX = {
-                "one":0.3,
-                "two":0.3,
-                "three":0.4
-            };
-            
-            this.chooseProbly(sampleDataX);
+            chooseProbly();
             
             document.getElementById("outputE").innerHTML = chosenTo;
             document.getElementById("outputF").innerHTML = inputGender;
