@@ -57,30 +57,11 @@
         };
             
 
-        function chooseProbly() {
-            for (possibleTo in sampleDataX) {
-                rangeCount += sampleDataX[possibleTo];
-                property = possibleTo;
-                toRange[property] = rangeCount;
-            }
-            
-            randomNumber = Math.random();
-            
-            for (possibilities in toRange) {
-                if (Number(toRange[possibilities]) - randomNumber >= 0) {
-                    if (chosenTo == "") {
-                        chosenTo = possibilities;
-                        difference = Number(toRange[possibilities]) - randomNumber;
-                    } else if (Number(toRange[possibilities]) - randomNumber < difference) {
-                        chosenTo = possibilities;
-                        difference = Number(toRange[possibilities]) - randomNumber;
-                    }
-                }
-            }
-            difference = 1;
-            toRange = {};
-            rangeCount = 0;
-        }
+
+
+
+
+
         
         function buttonClicked() {
             inputYear = document.getElementById("selectYear").value;
@@ -124,7 +105,7 @@
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
     <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
-    <script type="text/javascript" src="nameGenerator.js"></script>
+    <script type="text/javascript" src="chooseProbly.js"></script>
 
         
     </body>
