@@ -64,6 +64,8 @@
                 toRange[property] = rangeCount;
             }
             
+            randomNumber = Math.random();
+            
             for (possibilities in toRange) {
                 if (Number(toRange[possibilities]) - randomNumber >= 0) {
                     if (chosenTo == "") {
@@ -75,7 +77,9 @@
                     }
                 }
             }
-            return chosenTo
+            difference = 1;
+            toRange = {};
+            rangeCount = 0;
         }
         
         function buttonClicked() {
@@ -87,6 +91,7 @@
             
             document.getElementById("outputE").innerHTML = chosenTo;
             document.getElementById("outputF").innerHTML = inputGender;
+            
             chosenTo = "";
         }
 
