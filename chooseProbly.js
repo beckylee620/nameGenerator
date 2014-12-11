@@ -1,5 +1,3 @@
-<script type="text/javascript">
-
 function chooseProbly() {
   for (possibleTo in sampleDataX) {
     rangeCount += sampleDataX[possibleTo];
@@ -25,5 +23,3 @@ function chooseProbly() {
   toRange = {};
   rangeCount = 0;
 }
-
-</script>
