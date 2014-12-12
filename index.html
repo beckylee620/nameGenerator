@@ -57,8 +57,7 @@
             chosenFile = document.getElementById("selectGender").value;
             chosenFile.concat(".json");
 
-            jQuery.getJSON(chosenFile, function(data) {
-                chosenData = data;
+            jQuery.getJSON(chosenFile, function() {
                 outputName = "working";
             });
 
