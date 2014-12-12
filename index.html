@@ -23,9 +23,9 @@
             </select>
             
             <select id="selectGender">
-            <option value="unisex">unisex</option>
-            <option value="female">female</option>
-            <option value="male">male</option>
+            <option value="unisex.json">unisex</option>
+            <option value="female.json">female</option>
+            <option value="male.json">male</option>
             </select>
             
             </form>
@@ -55,7 +55,6 @@
             inputYear = parseInt(inputYear);
 //            inputGender = document.getElementById("selectGender").value;
             chosenFile = document.getElementById("selectGender").value;
-            chosenFile.concat("xxxxx");
 
             $.getJSON("unisex.json", function(data) {
                 outputName = "working";
