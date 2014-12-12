@@ -23,9 +23,9 @@
             </select>
             
             <select id="selectGender">
-            <option value="u">unisex</option>
-            <option value="f">female</option>
-            <option value="m">male</option>
+            <option value="unisex">unisex</option>
+            <option value="female">female</option>
+            <option value="male">male</option>
             </select>
             
             </form>
@@ -42,25 +42,29 @@
         var randomNumber = Math.random();
         var chosenTo = "";
         var difference = 1;
+        var outputName;
         
         
         var inputYear = "";
         var inputGender = "";
-        var sampleDataX = {
-            "one":0.3,
-            "two":0.3,
-            "three":0.4
-        };
+ //       var chosenData;
+        var chosenFile;
         
         function buttonClicked() {
             inputYear = document.getElementById("selectYear").value;
             inputYear = parseInt(inputYear);
-            inputGender = document.getElementById("selectGender").value;
+//            inputGender = document.getElementById("selectGender").value;
+            chosenFile = document.getElementById("selectGender").value;
+            chosenFile.concat(".json");
 
-            chooseProbly();
+            $.getJSON(chosenFile, function(chosenData) {
+                outputName = chosenData.2013;
+            });
+
+//            chooseProbly();
             
-            document.getElementById("outputE").innerHTML = chosenTo;
-            document.getElementById("outputF").innerHTML = inputGender;
+            document.getElementById("outputE").innerHTML = outputName;
+            document.getElementById("outputF").innerHTML = chosenFile;
             
             chosenTo = "";
         }
