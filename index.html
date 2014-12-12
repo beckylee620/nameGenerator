@@ -47,7 +47,7 @@
         
         var inputYear = "";
         var inputGender = "";
- //       var chosenData;
+        var chosenData;
         var chosenFile;
         
         function buttonClicked() {
@@ -57,7 +57,7 @@
             chosenFile = document.getElementById("selectGender").value;
             chosenFile.concat(".json");
 
-            jQuery.getJSON(chosenFile, function() {
+            $.getJSON("unisex.json", function(data) {
                 outputName = "working";
             });
 
