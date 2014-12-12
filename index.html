@@ -57,9 +57,9 @@
             chosenFile = document.getElementById("selectGender").value;
             chosenFile.concat(".json");
 
-//            $.getJSON(chosenFile, function(chosenData) {
-//                outputName = chosenData.2013;
-//            });
+            $.getJSON(chosenFile, function() {
+                outputName = "working";
+            });
 
 //            chooseProbly();
             
