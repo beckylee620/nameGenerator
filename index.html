@@ -54,7 +54,7 @@
         function buttonClicked() {
             $.getJSON("unisex.json", function(data) {
                 outputName = "working";
-            });
+
             inputYear = document.getElementById("selectYear").value;
             inputYear = parseInt(inputYear);
 //            inputGender = document.getElementById("selectGender").value;
@@ -68,6 +68,7 @@
             document.getElementById("outputF").innerHTML = chosenFile;
             
             chosenTo = "";
+            });
         }
         </script>
         </div>
