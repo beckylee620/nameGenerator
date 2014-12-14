@@ -52,12 +52,12 @@
         
         
         function buttonClicked() {
+            inputGender = document.getElementById("selectGender").value;
             $.getJSON("unisex.json", function(data) {
                 outputName = "working";
 
             inputYear = document.getElementById("selectYear").value;
             inputYear = parseInt(inputYear);
-//            inputGender = document.getElementById("selectGender").value;
             chosenFile = document.getElementById("selectGender").value;
       
 
