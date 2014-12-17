@@ -60,7 +60,11 @@
                 
                 var workingData = [];
                 
-                
+                $.getJSON(inputGender,function(result){
+                    $.each(result, function(i, field){
+                        $(workingData).append(field + " ");
+                    });
+                }); 
                 
                 
                
