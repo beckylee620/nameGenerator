@@ -61,16 +61,16 @@
                 var workingData = [];
                 
                 $.each(data, function(key, val) {
-                    if (key == inputYear) {
-                        workingData.push(val);
-                    }
+//                    if (key == inputYear) {
+                    workingData.append(val);
+//                    }
                 });
                 
                
                 
                 chosenFile = document.getElementById("selectGender").value;
                 
-                outputName = data[workingData];
+                outputName = workingData;
 
 
 //              chooseProbly();
