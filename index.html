@@ -61,7 +61,7 @@
                 var workingData = [];
                 
                 $.getJSON(inputGender,function(result){
-                    $.each(result, function(i, field){
+                    $.each(result, function(field){
                         $(workingData).append(field + " ");
                     });
                 }); 
