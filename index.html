@@ -50,6 +50,7 @@
         var chosenData;
         var chosenFile = "";
         
+        var workingData;
         
         function buttonClicked() {
             inputGender = document.getElementById("selectGender").value;
@@ -58,12 +59,14 @@
                 inputYear = document.getElementById("selectYear").value;
                 inputYear = parseInt(inputYear);
                 
-                var workingData = [];
                 
                 $.getJSON(inputGender,function(result){
-                    $.each(result, function(i, field){
-                        $(workingData).push(field + " ");
-                    });
+                    workingData = result;
+                    
+                    
+//                    $.each(result, function(i, field){
+//                        $(workingData).push(field + " ");
+//                    });
                 }); 
                 
                 
