@@ -1,6 +1,9 @@
 function chooseProbly() {
-  for (possibleTo in chosenData) {
-    rangeCount += chosenData[possibleTo];
+  
+  currentFrom = chosenData["a"];
+  
+  for (possibleTo in currentFrom) {
+    rangeCount += currentFrom[possibleTo];
     property = possibleTo;
     toRange[property] = rangeCount;
   }
