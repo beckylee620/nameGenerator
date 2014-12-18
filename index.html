@@ -43,14 +43,13 @@
         var chosenTo = "";
         var difference = 1;
         var outputName = "";
-        
+        var currentFrom;
         
         var inputYear = "";
         var inputGender = "";
         var chosenData;
         var chosenFile = "";
         
-        var workingData;
         
         function buttonClicked() {
             inputGender = document.getElementById("selectGender").value;
@@ -59,15 +58,15 @@
                 inputYear = document.getElementById("selectYear").value;
                 inputYear = parseInt(inputYear);
                 
-                workingData = data[inputYear];
+                chosenData = data[inputYear];
                
                 
                 chosenFile = document.getElementById("selectGender").value;
                 
-                outputName = workingData;
+                outputName = chosenTo;
 
 
-//              chooseProbly();
+                chooseProbly();
             
                 document.getElementById("outputE").innerHTML = outputName;
                 document.getElementById("outputF").innerHTML = chosenFile;
