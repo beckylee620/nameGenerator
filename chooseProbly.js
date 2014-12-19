@@ -1,6 +1,7 @@
 function chooseProbly() {
   
-  currentFrom = chosenData[0];
+  currentFrom = chosenData["2013"];
+  currentFrom = currentFrom["a"];
   
   for (possibleTo in currentFrom) {
     rangeCount += currentFrom[possibleTo];
